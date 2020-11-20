@@ -18,6 +18,7 @@ export default {
   ],
 
   plugins: [
+    { src: '~plugins/lazyLoadImage.js' }
   ],
 
   components: true,
