@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "aws-sdk": "^2.796.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "pug": "^3.0.0",

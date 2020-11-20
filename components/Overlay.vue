@@ -14,7 +14,7 @@ export default {
     .overlay__image--desktop
       img.overlay__image--additional(src="~/assets/images/top.png")
       nuxt-link(to='/photos')
-        img.overlay__image--main(@click='this.$router.push("/photos")' src="~/assets/images/eternal-desktop.png")
+        img.overlay__image--main(src="~/assets/images/eternal-desktop.png")
       img.overlay__image--additional(src="~/assets/images/bottom.png")
     .overlay__image--mobile
       img.overlay__image--spacer(src="~/assets/images/top.png")
