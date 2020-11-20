@@ -1,0 +1,24 @@
+
+ETERNAL = {
+  breakpoints: {
+    sm: 340px,
+    md: 600px,
+    lg: 960px,
+    xlg: 1235px,
+    xxl: 1264px
+  },
+  colours: {
+    dark-grey: #3F3D3D,
+    darker-grey: #272525,
+    darkest-grey: #141414,
+    acid-green: #95F944
+  }
+}
+
+media-breakpoint-up(breakpoint)
+  if (breakpoint in ETERNAL.breakpoints)
+    @media all and (min-width: ETERNAL.breakpoints[breakpoint])
+      {block}
+  else
+    @media all and (min-width breakpoint)
+      {block}
