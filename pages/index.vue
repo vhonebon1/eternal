@@ -6,8 +6,6 @@ export default {
     Overlay
   },
   mounted () {
-    require( "dotenv" ).config()
-
     var AWS = require('aws-sdk')
     AWS.config.update({
       accessKeyId: `${process.env.AWS_ACCESS_KEY_ID_VH}`, 
@@ -26,7 +24,7 @@ export default {
 
     s3.listObjects(params, function (err, data) {
       if (err) throw err
-      const imagePaths = data.Contents.map(image => `https://${process.env.AWS_BUCKET_VH}.s3.${process.env.AWS_REGION_VH}.amazonaws.com/${image.Key}`)
+      const imagePaths = data.Contents.map(image => `https://${process.env.AWS_BUCKET_VH}.s3.${process.env.AWS_REGION_VH}.amazonaws.com/${image.Key}`).reverse()
       that.$store.commit('add', imagePaths)
     })
   }

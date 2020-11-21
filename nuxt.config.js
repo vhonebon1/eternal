@@ -41,10 +41,5 @@ export default {
   axios: {},
 
   build: {
-    extend (config, { isDev, isClient }) {
-      config.node = {
-        fs: 'empty'
-       }
-    }
   }
 }

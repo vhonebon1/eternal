@@ -1,44 +1,14 @@
 <script>
-import axios from 'axios'
+import Nav from './Nav'
 
 export default {
   name: 'Uploader',
+  components: {
+    Nav
+  },
   data() {
     return {
       file: ''
-    }
-  },
-  methods: {
-    submitFile () {
-        /*
-                Initialize the form data
-            */
-            let formData = new FormData();
-
-            /*
-                Add the form data we need to submit
-            */
-            formData.append('file', this.file);
-
-        /*
-          Make the request to the POST /single-file URL
-        */
-            axios.post( '/single-file',
-                formData,
-                {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-              }
-            ).then(function(){
-          console.log('SUCCESS!!');
-        })
-        .catch(function(){
-          console.log('FAILURE!!');
-        });
-      },
-    handleFileUpload () {
-      this.file = this.$refs.file.files[0]
     }
   }
 }
@@ -46,7 +16,7 @@ export default {
 
 <template lang='pug'>
   .uploader HEY
-    <input type="file" id="file" ref="file" v-on:change="onFileChange()"/>
+    Nav
 
 </template>
 

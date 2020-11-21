@@ -1,8 +1,12 @@
 <script>
+import Nav from './Nav'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'PhotoContainer',
+  components: {
+    Nav
+  },
   computed: {
     ...mapGetters({
       imageBatch: 'getImageBatch'
@@ -16,7 +20,9 @@ export default {
 
 <template lang="pug">
   .photo-container
-    img(v-for='image in images' :src='image')
+    .photo-container__photos
+      img(v-for='image in images' :src='image')
+    Nav
 </template>
 
 <style scoped lang="stylus">
@@ -24,8 +30,10 @@ export default {
 
   .photo-container
     width: 100vw
-    display: flex
-    flex-wrap: wrap
+
+    &__photos
+      display: flex
+      flex-wrap: wrap
 
     img 
       display: block
