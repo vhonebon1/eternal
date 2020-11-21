@@ -27,10 +27,15 @@ export default {
       const imagePaths = data.Contents.map(image => `https://${process.env.AWS_BUCKET_VH}.s3.${process.env.AWS_REGION_VH}.amazonaws.com/${image.Key}`)
       that.$store.commit('add', imagePaths)
     })
+  },
+  computed: {
+    hey () {
+      return process.env.AWS_BUCKET_VH
+    }
   }
 }
 </script>
 
 <template lang='pug'>
-  overlay
+  div {{hey}}
 </template>
