@@ -1,20 +1,12 @@
 
 <script>
-import Dropzone from 'nuxt-dropzone'
-import 'nuxt-dropzone/dropzone.css'
 import S3 from 'aws-s3'
  
 export default {
-  components: {
-    Dropzone
-  },
-  methods: {
-    uploadFile(fieldName, files) {
-      let file = files[0]
-      this.S3Client
-        .uploadFile(file, this.newFileName)
-        .then(data => console.log(data))
-        .catch(err => console.error(err))
+  name: 'Uploader',
+  data () {
+    return {
+      showSuccess: false
     }
   },
   computed:{
@@ -33,10 +25,25 @@ export default {
     newFileName () {
       return Math.random().toString().slice(2)
     }
+  },
+  methods: {
+    uploadFile(fieldName, files) {
+      let file = files[0]
+      this.S3Client
+        .uploadFile(file, this.newFileName)
+        .then(data => this.handleSuccess())
+        .catch(err => console.error(err))
+    },
+    handleSuccess () {
+      this.showSuccess = true
+      setTimeout(() => this.showSuccess = false, 3000)
+    }
   }
 }
 </script>
 
 <template lang="pug">
-  input(type='file' @change='uploadFile("image", $event.target.files)')
+  .uploader
+    input(type='file' @change='uploadFile("image", $event.target.files)')
+    .uploader__success(v-if='showSuccess') Thanks! Your image has been sent to the moderator :)
 </template>
