@@ -14,6 +14,13 @@ export default {
     ]
   },
 
+  env: {
+    AWS_ACCESS_KEY_ID_VH: process.env.AWS_ACCESS_KEY_ID_VH,
+    AWS_REGION_VH: process.env.AWS_REGION_VH,
+    AWS_SECRET_ACCESS_KEY_VH: process.env.AWS_SECRET_ACCESS_KEY_VH,
+    AWS_BUCKET_VH: process.env.AWS_BUCKET_VH
+  },
+
   css: [
   ],
 
