@@ -1,9 +1,8 @@
 <script>
 import Nav from './../components/Nav'
-import uploader from './../components/Uploader'
 
 export default {
-  name: 'Upload',
+  name: 'Contact',
   components: {
     Nav
   }
@@ -11,10 +10,12 @@ export default {
 </script>
 
 <template lang='pug'>
-  .upload
-    uploader
+  .contact
+    h1 heyyyyy
     Nav
+  
 </template>
 
-<style lang='stylus'>
+<style scoped lang='stylus'>
+
 </style>

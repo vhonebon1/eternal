@@ -8,8 +8,9 @@ export default {
 <template lang="pug">
   .nav
     .nav__buttons
-      nuxt-link.button(to='/upload') Upload photos
       nuxt-link.button(to='/photos') Home
+      nuxt-link.button(to='/upload') Upload photos
+      nuxt-link.button(to='/contact') Contact
 
 </template>
 
