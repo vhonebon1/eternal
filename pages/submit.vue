@@ -24,7 +24,7 @@ export default {
 
   .upload
     display: flex
-    height: 100vh
+    height: calc(100vh - 55)
 
     &__content
       width: 100vw
