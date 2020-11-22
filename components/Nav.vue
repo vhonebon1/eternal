@@ -1,7 +1,27 @@
 <script>
 
 export default {
-  name: 'Nav'
+  name: 'Nav',
+  data () {
+    return {
+      windowWidth: 0
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+    })
+  },
+  destroyed () {
+    window.removeEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+    })  
+  },
+  computed: {
+    buttonText() {
+      return this.windowWidth < 600 ? 'Submit' : 'Submit photos'
+    }
+  }
 }
 </script>
 
@@ -9,7 +29,7 @@ export default {
   .nav
     .nav__buttons
       nuxt-link.nav__buttons--button(to='/photos') Home
-      nuxt-link.nav__buttons--button(to='/submit') Submit photos
+      nuxt-link.nav__buttons--button(to='/submit') {{ buttonText }}
       nuxt-link.nav__buttons--button(to='/contact') Contact
 
 </template>
@@ -25,9 +45,12 @@ export default {
     height: 55px
     width: 100vw
     display: flex
-    justify-content: flex-end
+    justify-content: space-around
     background-color: rgba(149,249,68,0.6)
     font-family: 'Stalinist One', cursive
+
+    +media-breakpoint-up(md)
+      justify-content: flex-end
 
     &__buttons
       display: flex
@@ -51,7 +74,7 @@ export default {
         cursor: pointer
         text-decoration: none
         opacity: 1
-        font-size: 0.5em
+        font-size: 0.55em
 
         +media-breakpoint-up(md)
           height: 2.5rem
