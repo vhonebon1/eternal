@@ -1,12 +1,8 @@
 <script>
-import Nav from './Nav'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'PhotoContainer',
-  components: {
-    Nav
-  },
   computed: {
     ...mapGetters({
       imageBatch: 'getImageBatch'
@@ -22,7 +18,6 @@ export default {
   .photo-container
     .photo-container__photos
       img(v-for='image in images' :src='image')
-    Nav
 </template>
 
 <style scoped lang="stylus">

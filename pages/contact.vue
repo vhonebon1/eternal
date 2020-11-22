@@ -12,7 +12,9 @@ export default {
 <template lang='pug'>
   .contact
     .contact__content
-      .contact__content--email For all enquiries: eternal@peoples.com
+      .contact__content--enquiry
+        .contact__content--text For all enquiries:
+        .contact__content--email eternalatpeoples@gmail.com
     Nav
   
 </template>
@@ -40,10 +42,14 @@ export default {
       padding: 30px
       text-align: center
       border-radius: 10px
+      font-family: 'Stalinist One', cursive
+      color: ETERNAL.colours.yellow
+
+      &--text
+        font-size: 2em
+        margin-bottom: 10px
 
       &--email
-        font-size: 2em
-        font-family: 'Stalinist One', cursive
-        color: ETERNAL.colours.yellow
+        font-size: 1.2em
 
 </style>
