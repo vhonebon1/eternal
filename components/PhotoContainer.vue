@@ -29,6 +29,7 @@ export default {
     &__photos
       display: flex
       flex-wrap: wrap
+      align-items: flex-start
 
     img 
       display: block

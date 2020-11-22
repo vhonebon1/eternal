@@ -56,14 +56,16 @@ export default {
         height: 50vh
 
       &--text
-        font-size: 1em
+        font-size: 1.2em
+        line-height: 1.3em
         margin-bottom: 10px
 
         +media-breakpoint-up(md)
           font-size: 2em
 
       &--email
-        font-size: 0.6em
+        font-size: 0.7em
+        line-height: 0.9em
 
         +media-breakpoint-up(md)
           font-size: 1.2em

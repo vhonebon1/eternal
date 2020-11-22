@@ -43,12 +43,13 @@ export default {
         justify-content: space-around
         background: ETERNAL.colours.darkest-grey
         opacity: 0.95
-        padding: 30px
+        padding: 15px
         text-align: center
         border-radius: 10px
 
         +media-breakpoint-up(lg)
           width: 50vw
           height: 50vh
+          padding: 30px
   
 </style>

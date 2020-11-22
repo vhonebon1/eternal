@@ -72,6 +72,21 @@ export default {
     &__title
       margin-bottom: 20px
 
+      h1
+        font-size: 1.3em
+        line-height: 1.5em
+        margin-bottom: 10px
+
+        +media-breakpoint-up(md)
+          font-size: 2em
+
+      h3
+        font-size: 1em
+        line-height: 1.2em
+
+        +media-breakpoint-up(md)
+          font-size: 1.2em
+
     &__success
       width: 50%
       margin: 20px auto
