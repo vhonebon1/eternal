@@ -16,6 +16,7 @@ export default {
 
 <style scoped lang="stylus">
 @import './../assets/styles/*'
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap')
 
   .nav
     position: fixed
@@ -26,6 +27,7 @@ export default {
     display: flex
     justify-content: flex-end
     background-color: rgba(149,249,68,0.6)
+    font-family: 'Stalinist One', cursive
 
     .button
       position: relative
