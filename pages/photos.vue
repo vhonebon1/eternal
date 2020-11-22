@@ -10,19 +10,11 @@ export default {
   },
   data () {
     return {
-      showNav: false,
-      scrollPosition: 0
+      showNav: false
     }
   },
   mounted () {
-    var isScrolling
-    window.addEventListener('scroll', () => {
-      this.handleScroll()
-
-      isScrolling = setTimeout(() => {
-        this.handleStopScroll()
-      }, 300)
-    })
+    window.addEventListener('scroll', this.handleScroll)
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
@@ -30,9 +22,6 @@ export default {
   methods: {
     handleScroll (event) {  
       this.showNav = true
-    },
-    handleStopScroll () {
-      this.showNav = false
     }
   }
 }
