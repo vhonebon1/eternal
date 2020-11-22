@@ -28,7 +28,7 @@ export default {
       return new S3(this.config)
     },
     newFileName () {
-      return Math.random().toString().slice(2)
+      return `pending/${Math.random().toString().slice(2)}`
     }
   },
   methods: {
@@ -52,8 +52,8 @@ export default {
 <template lang="pug">
   .uploader
     .uploader__title
-      h1 Submit and Eternal photo
-      h3 Your photo will be uploaded to the site once it has been approved
+      h1 Submit an Eternal photo
+      h3(v-if='!showSuccess && !isLoading') Your photo will be uploaded to the site once it has been approved
     .uploader__spinner(v-if='isLoading')
       FadeLoader
     input(v-if='!showSuccess && !isLoading' type='file' multiple="multiple" @change='uploadFile("image", $event.target.files)')

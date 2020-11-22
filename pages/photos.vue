@@ -55,7 +55,7 @@ export default {
     params () {
       return {
         Bucket: `${process.env.AWS_BUCKET_VH}`,
-        Delimiter: '/',
+        Prefix: 'approved'
       }
     }
   }
