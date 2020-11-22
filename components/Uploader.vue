@@ -69,6 +69,10 @@ export default {
     color: ETERNAL.colours.yellow
     font-family: 'Stalinist One', cursive
 
+    input 
+      display: block
+      margin: 0 auto
+
     &__title
       margin-bottom: 20px
 

@@ -14,7 +14,9 @@ export default {
     .contact__content
       .contact__content--enquiry
         .contact__content--text For all enquiries:
-        .contact__content--email eternalatpeoples@gmail.com
+        .contact__content--email 
+          .contact__content--email__line eternalatpeoples
+          .contact__content--email__line @gmail.com
     Nav
   
 </template>
@@ -58,7 +60,7 @@ export default {
       &--text
         font-size: 1.2em
         line-height: 1.3em
-        margin-bottom: 10px
+        margin-bottom: 20px
 
         +media-breakpoint-up(md)
           font-size: 2em
@@ -69,5 +71,8 @@ export default {
 
         +media-breakpoint-up(md)
           font-size: 1.2em
+
+        &__line
+          margin-bottom: 10px
 
 </style>
