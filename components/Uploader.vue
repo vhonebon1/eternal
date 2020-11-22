@@ -1,13 +1,18 @@
 
 <script>
 import S3 from 'aws-s3'
+import FadeLoader from 'vue-spinner/src/FadeLoader.vue'
  
 export default {
   name: 'Uploader',
   data () {
     return {
-      showSuccess: false
+      showSuccess: false,
+      isLoading: false
     }
+  },
+  components: {
+    FadeLoader
   },
   computed:{
     config () {
@@ -28,6 +33,7 @@ export default {
   },
   methods: {
     uploadFile(fieldName, files) {
+      this.isLoading = true
       let file = files[0]
       this.S3Client
         .uploadFile(file, this.newFileName)
@@ -36,6 +42,7 @@ export default {
     },
     handleSuccess () {
       this.showSuccess = true
+      this.isLoading = false
       setTimeout(() => this.showSuccess = false, 3000)
     }
   }
@@ -44,6 +51,29 @@ export default {
 
 <template lang="pug">
   .uploader
-    input(type='file' @change='uploadFile("image", $event.target.files)')
-    .uploader__success(v-if='showSuccess') Thanks! Your image has been sent to the moderator :)
+    .uploader__spinner(v-if='isLoading')
+      FadeLoader
+    input(v-else type='file' v-if='!showSuccess' @change='uploadFile("image", $event.target.files)')
+    .uploader__success(v-if='showSuccess') Thanks! Your photo has been sent to the moderator :)
 </template>
+
+<style scoped lang='stylus'>
+@import './../assets/styles/*'
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap')
+
+  .uploader
+    align-items: center
+
+    &__success
+      width: 50%
+      margin: 20px auto
+      color: ETERNAL.colours.acid-green
+      font-family: 'Stalinist One', cursive
+
+    &__spinner
+      display: block
+      height: 20px
+      width: 20px
+      margin: 0 auto
+
+</style>

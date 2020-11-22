@@ -13,8 +13,9 @@ export default {
 <template lang='pug'>
   .upload
     .upload__content
-      uploader
-      Nav
+      .upload__content--box
+        uploader
+    Nav
 </template>
 
 <style lang='stylus'>
@@ -28,8 +29,26 @@ export default {
     &__content
       width: 100vw
       background-image: url('~assets/images/cash.jpg')
+      background-repeat: repeat
       display: flex
       flex-direction: column
       justify-content space-around
+
+      &--box
+        width: 80vw
+        height: 80vh
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        background: ETERNAL.colours.darkest-grey
+        opacity: 0.95
+        padding: 30px
+        text-align: center
+        border-radius: 10px
+
+        +media-breakpoint-up(lg)
+          width: 50vw
+          height: 50vh
   
 </style>

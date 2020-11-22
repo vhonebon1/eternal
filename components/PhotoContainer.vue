@@ -32,6 +32,9 @@ export default {
 
     img 
       display: block
-      width: 50%
+      width: 100%
+
+      +media-breakpoint-up(lg)
+        width: 50%
 
 </style>

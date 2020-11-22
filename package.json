@@ -12,9 +12,12 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "aws-s3": "^2.0.5",
+    "aws-sdk": "^2.797.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
+    "nuxt-dropzone": "^1.0.4",
     "v-lazy-image": "^1.4.0",
+    "vue-spinner": "^1.0.4",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
