@@ -51,9 +51,12 @@ export default {
 
 <template lang="pug">
   .uploader
+    .uploader__title
+      h1 Submit and Eternal photo
+      h3 Your photo will be uploaded to the site once it has been approved
     .uploader__spinner(v-if='isLoading')
       FadeLoader
-    input(v-else type='file' v-if='!showSuccess' @change='uploadFile("image", $event.target.files)')
+    input(v-if='!showSuccess && !isLoading' type='file' multiple="multiple" @change='uploadFile("image", $event.target.files)')
     .uploader__success(v-if='showSuccess') Thanks! Your photo has been sent to the moderator :)
 </template>
 
@@ -63,12 +66,15 @@ export default {
 
   .uploader
     align-items: center
+    color: ETERNAL.colours.yellow
+    font-family: 'Stalinist One', cursive
+
+    &__title
+      margin-bottom: 20px
 
     &__success
       width: 50%
       margin: 20px auto
-      color: ETERNAL.colours.acid-green
-      font-family: 'Stalinist One', cursive
 
     &__spinner
       display: block
