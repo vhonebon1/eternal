@@ -13,10 +13,11 @@ export default {
   .contact
     .contact__content
       .contact__content--enquiry
-        .contact__content--text For all enquiries:
-        .contact__content--email 
-          .contact__content--email__line eternalatpeoples
-          .contact__content--email__line @gmail.com
+        div
+          .contact__content--text For all enquiries:
+          .contact__content--email 
+            .contact__content--email__line eternalatpeoples
+            .contact__content--email__line @gmail.com
     Nav
   
 </template>
@@ -26,40 +27,39 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap')
 
   .contact
-    height: -webkit-fill-available
-    width: 100vw
-    background-image: url('~assets/images/bang.jpg')
-    background-repeat: repeat
     display: flex
-    flex-direction: column
-    justify-content: space-around
-    padding-bottom: 55px
+    height: -webkit-fill-available
 
     +media-breakpoint-up(sm)
       height: 100vh
 
     &__content
-      width: 80%
-      height: calc(80% - 55px)
-      min-width: 200px
-      margin: 0 auto
+      width: 100vw
+      background-image: url('~assets/images/bang.jpg')
+      background-repeat: repeat
       display: flex
       flex-direction: column
-      justify-content: space-around
-      background: ETERNAL.colours.darkest-grey
-      opacity: 0.95
-      padding: 30px
-      text-align: center
-      border-radius: 10px
-      font-family: 'Stalinist One', cursive
-      color: ETERNAL.colours.yellow
+      justify-content space-around
 
-      +media-breakpoint-up(md)
-        min-width: 550px
+      &--enquiry
+        width: 80%
+        height: calc(80% - 55px)
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        background: ETERNAL.colours.darkest-grey
+        opacity: 0.95
+        padding: 15px
+        text-align: center
+        border-radius: 10px
+        font-family: 'Stalinist One', cursive
+        color: ETERNAL.colours.yellow
 
-      +media-breakpoint-up(lg)
-        width: 50vw
-        height: 50vh
+        +media-breakpoint-up(lg)
+          width: 50vw
+          height: 50vh
+          padding: 30px
 
       &--text
         font-size: 1.2em

@@ -49,6 +49,8 @@ export default {
         padding: 15px
         text-align: center
         border-radius: 10px
+        font-family: 'Stalinist One', cursive
+        color: ETERNAL.colours.yellow
 
         +media-breakpoint-up(lg)
           width: 50vw
