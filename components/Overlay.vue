@@ -1,11 +1,6 @@
 <script>
 export default {
-  name: 'Overlay',
-  methods: {
-    onClick () {
-      this.$emit('click')
-    }
-  }
+  name: 'Overlay'
 }
 </script>
 
@@ -18,7 +13,8 @@ export default {
       img.overlay__image--additional(src="~/assets/images/bottom.png")
     .overlay__image--mobile
       img.overlay__image--spacer(src="~/assets/images/top.png")
-      img.overlay__image--main(src="~/assets/images/eternal-mobile.png")
+      nuxt-link(to='/photos')
+        img.overlay__image--main(src="~/assets/images/eternal-mobile.png")
     img.overlay__image--spacer(src="~/assets/images/spacer.png")
 </template>
 
