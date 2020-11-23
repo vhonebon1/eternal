@@ -24,8 +24,8 @@ export default {
 
   .upload
     display: flex
-    height: -webkit-fill-available
     height: 100vh
+    height: -webkit-fill-available
 
     &__content
       width: 100vw
