@@ -36,8 +36,8 @@ export default {
       justify-content space-around
 
       &--box
-        width: 80vw
-        height: 80vh
+        width: 80%
+        height: 80%
         margin: 0 auto
         display: flex
         flex-direction: column
