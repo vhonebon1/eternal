@@ -24,8 +24,10 @@ export default {
 
   .upload
     display: flex
-    height: 100vh
     height: -webkit-fill-available
+
+    +media-breakpoint-up(sm)
+      height: 100vh
 
     &__content
       width: 100vw

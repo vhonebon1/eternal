@@ -26,7 +26,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap')
 
   .contact
-    height: 100vh
     height: -webkit-fill-available
     width: 100vw
     background-image: url('~assets/images/bang.jpg')
@@ -34,6 +33,10 @@ export default {
     display: flex
     flex-direction: column
     justify-content: space-around
+    padding-bottom: 55px
+
+    +media-breakpoint-up(sm)
+      height: 100vh
 
     &__content
       width: 80%
