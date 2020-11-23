@@ -37,8 +37,8 @@ export default {
     &__content
       width: 80vw
       min-width: 200px
-      height: calc(80vh - 55px)
-      margin: 0 auto
+      height: 80vh
+      margin: 0 auto 55px 0
       display: flex
       flex-direction: column
       justify-content: space-around
