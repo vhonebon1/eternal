@@ -24,8 +24,7 @@ export default {
 
   .upload
     display: flex
-    height: calc(100% - 55px)
-    height: calc(100vh - 55px)
+    height: 100vh
 
     &__content
       width: 100vw
@@ -37,7 +36,7 @@ export default {
 
       &--box
         width: 80vw
-        height: 80vh
+        height: calc(80vh - 55px)
         margin: 0 auto
         display: flex
         flex-direction: column
