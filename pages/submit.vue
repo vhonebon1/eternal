@@ -37,7 +37,7 @@ export default {
       &--box
         width: 80vw
         height: 80vh
-        margin: 0 auto 55px 0
+        margin: 0 auto
         display: flex
         flex-direction: column
         justify-content: space-around
