@@ -26,8 +26,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap')
 
   .contact
-    height: calc(100% - 55px)
-    height: calc(100vh - 55px)
+    height: 100vh
     width: 100vw
     background-image: url('~assets/images/bang.jpg')
     background-repeat: repeat
@@ -37,7 +36,7 @@ export default {
 
     &__content
       width: 80%
-      height: 80%
+      height: calc(80% - 55px)
       min-width: 200px
       margin: 0 auto
       display: flex
